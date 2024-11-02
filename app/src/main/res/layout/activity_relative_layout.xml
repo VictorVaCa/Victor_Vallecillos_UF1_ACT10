@@ -5,12 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <LinearLayout
+    tools:context=".RelativeLayoutActivity">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:padding="16dp">
 
         <EditText
@@ -26,6 +24,7 @@
             android:id="@+id/lastNameField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/nameField"
             android:layout_marginBottom="8dp"
             android:hint="@string/lastNameField"
             android:inputType="textPersonName"
@@ -35,6 +34,7 @@
             android:id="@+id/ageField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/lastNameField"
             android:layout_marginBottom="8dp"
             android:hint="@string/ageField"
             android:inputType="number"
@@ -44,6 +44,7 @@
             android:id="@+id/userField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/ageField"
             android:layout_marginBottom="8dp"
             android:hint="@string/userField"
             android:inputType="text"
@@ -53,6 +54,7 @@
             android:id="@+id/passwordField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/userField"
             android:layout_marginBottom="8dp"
             android:hint="@string/passwordField"
             android:inputType="textPassword"
@@ -62,27 +64,29 @@
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_below="@id/passwordField"
             android:layout_marginTop="16dp"
             android:text="@string/registerButton"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <Button
-            android:id="@+id/relativeLayoutButton"
+            android:id="@+id/linearLayoutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/registerButton"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/changeRelativeLayout"
+            android:text="@string/changeLinearLayout"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/constraintLayoutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutButton"
             android:text="@string/changeConstraintLayout"
             android:textSize="24sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
